@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Mendelian genetics, Punnett squares, inheritance patterns and meiosis with NAVUMSH.">
+  <title>Genetics Learning Lab | NAVUMSH</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="index.html">NAVUMSH<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#punnett">Punnett Square</a>
+      <a href="#patterns">Inheritance</a>
+      <a href="#meiosis">Meiosis</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <section class="lab-hero">
+    <p class="eyebrow">NAVUMSH / INTERACTIVE EXPERIENCE</p>
+    <h1>The Genetics<br>Learning Lab.</h1>
+    <p>
+      Explore how genetic information is inherited. Change genetic
+      combinations, observe predicted outcomes and test your understanding.
+    </p>
+  </section>
+
+  <main class="lab-container">
+
+    <section class="lab-card">
+      <p class="eyebrow">01 / YOUR GENETICS DICTIONARY</p>
+      <h2>Understand the language of inheritance.</h2>
+      <p><strong>Gene:</strong> A region of DNA that contributes to a functional product or biological trait.</p>
+      <p><strong>Allele:</strong> One of the alternative versions of a gene.</p>
+      <p><strong>Genotype:</strong> The genetic combination being considered.</p>
+      <p><strong>Phenotype:</strong> An observable characteristic influenced by genotype and often the environment.</p>
+      <p><strong>Homozygous:</strong> Having two identical alleles at a gene location.</p>
+      <p><strong>Heterozygous:</strong> Having two different alleles at a gene location.</p>
+    </section>
+
+    <section class="lab-card" id="punnett">
+      <p class="eyebrow">02 / EXPERIMENT ONE</p>
+      <h2>Monohybrid cross simulator.</h2>
+      <p>
+        A Punnett square helps predict possible allele combinations
+        from a genetic cross.
+      </p>
+
+      <div class="lab-controls">
+        <label>
+          Parent 1
+          <select id="parent1">
+            <option value="BB">BB</option>
+            <option value="Bb" selected>Bb</option>
+            <option value="bb">bb</option>
+          </select>
+        </label>
+
+        <label>
+          Parent 2
+          <select id="parent2">
+            <option value="BB">BB</option>
+            <option value="Bb" selected>Bb</option>
+            <option value="bb">bb</option>
+          </select>
+        </label>
+
+        <label>
+          Inheritance model
+          <select id="dominance">
+            <option value="complete">Complete dominance</option>
+            <option value="incomplete">Incomplete dominance</option>
+            <option value="codominance">Codominance</option>
+          </select>
+        </label>
+
+        <button id="calculate">Calculate cross</button>
+      </div>
+
+      <div id="punnett-result" aria-live="polite"></div>
+    </section>
+
+    <section class="lab-card" id="dihybrid">
+      <p class="eyebrow">03 / EXPERIMENT TWO</p>
+      <h2>Dihybrid cross.</h2>
+      <p>
+        Explore the inheritance of two genes together. This introductory
+        model assumes complete dominance and independent assortment.
+      </p>
+
+      <div class="lab-controls">
+        <label>
+          Parent 1
+          <select id="dparent1">
+            <option value="AABB">AABB</option>
+            <option value="AaBb" selected>AaBb</option>
+            <option value="aabb">aabb</option>
+            <option value="Aabb">Aabb</option>
+            <option value="aaBb">aaBb</option>
+          </select>
+        </label>
+
+        <label>
+          Parent 2
+          <select id="dparent2">
+            <option value="AABB">AABB</option>
+            <option value="AaBb" selected>AaBb</option>
+            <option value="aabb">aabb</option>
+            <option value="Aabb">Aabb</option>
+            <option value="aaBb">aaBb</option>
+          </select>
+        </label>
+
+        <button id="dcalculate">Calculate dihybrid cross</button>
+      </div>
+
+      <div id="dihybrid-result" aria-live="polite"></div>
+    </section>
+
+    <section class="lab-card" id="patterns">
+      <p class="eyebrow">04 / BEYOND MENDEL</p>
+      <h2>Explore inheritance patterns.</h2>
+
+      <div class="lab-controls">
+        <label>
+          Select a pattern
+          <select id="pattern">
+            <option value="complete">Complete dominance</option>
+            <option value="incomplete">Incomplete dominance</option>
+            <option value="codominance">Codominance</option>
+            <option value="xlinked">X-linked recessive inheritance</option>
+            <option value="mitochondrial">Mitochondrial inheritance</option>
+            <option value="polygenic">Polygenic inheritance</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="pattern-result" class="result-text" aria-live="polite"></div>
+    </section>
+
+    <section class="lab-card" id="meiosis">
+      <p class="eyebrow">05 / CELL DIVISION</p>
+      <h2>Explore meiosis.</h2>
+      <p>
+        Meiosis is a specialised type of cell division that produces
+        haploid cells and helps generate genetic variation.
+      </p>
+
+      <div class="lab-controls">
+        <label>
+          Select a stage
+          <select id="meiosis-stage">
+            <option value="prophase">Prophase I</option>
+            <option value="metaphase">Metaphase I</option>
+            <option value="anaphase">Anaphase I</option>
+            <option value="telophase">Telophase I</option>
+            <option value="meiosis2">Meiosis II</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="meiosis-result" class="result-text" aria-live="polite"></div>
+    </section>
+
+    <section class="lab-card" id="quiz">
+      <p class="eyebrow">06 / TEST YOUR KNOWLEDGE</p>
+      <h2>Genetics knowledge check.</h2>
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="feedback" class="result-text" aria-live="polite"></p>
+      <div class="lab-controls">
+        <button id="next-question">Next question</button>
+      </div>
+      <p id="score"></p>
+    </section>
+
+    <section class="lab-card">
+      <p class="eyebrow">07 / SCIENTIFIC READING</p>
+      <h2>Continue exploring.</h2>
+      <p>Learn more from trusted scientific resources:</p>
+      <p><a href="https://www.genome.gov/genetics-glossary" target="_blank" rel="noopener noreferrer">NHGRI — Genetics Glossary ↗</a></p>
+      <p><a href="https://medlineplus.gov/genetics/understanding/inheritance/inheritancepatterns/" target="_blank" rel="noopener noreferrer">MedlinePlus — Inheritance Patterns ↗</a></p>
+      <p><a href="https://openstax.org/books/biology/pages/12-3-laws-of-inheritance" target="_blank" rel="noopener noreferrer">OpenStax — Laws of Inheritance ↗</a></p>
+      <p><a href="https://www.ncbi.nlm.nih.gov/books/NBK115568/" target="_blank" rel="noopener noreferrer">NCBI Bookshelf — Understanding Genetics ↗</a></p>
+    </section>
+
+  </main>
+
+  <footer class="lab-footer">
+    NAVUMSH — The Science of Inheritance
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
