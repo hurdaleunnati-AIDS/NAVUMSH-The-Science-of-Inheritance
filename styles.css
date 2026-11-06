@@ -1,0 +1,441 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+  --green: #183c32;
+  --deep-green: #102c25;
+  --cream: #f6f3e9;
+  --gold: #c6a76a;
+  --text: #263c34;
+  --muted: #78877c;
+  --white: #fffdf7;
+  --line: rgba(24, 60, 50, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 82px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.navbar nav a {
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #a4864d;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 90px 10%;
+  background: var(--green);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(55px, 7vw, 88px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.hero h1 em,
+.intro h2 em {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 440px;
+  margin: 26px 0 32px;
+  color: #d4ddd4;
+  font-size: 15px;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--gold);
+  color: var(--deep-green);
+  padding: 15px 23px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  background: #ddc38c;
+}
+
+.hero-note {
+  margin-top: 36px;
+  color: #aabbb0;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-art {
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.orbit {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(198, 167, 106, 0.4);
+  border-radius: 50%;
+}
+
+.orbit-two {
+  width: 260px;
+  height: 390px;
+  transform: rotate(48deg);
+}
+
+.dna-symbol {
+  display: grid;
+  grid-template-columns: repeat(2, 70px);
+  gap: 5px 35px;
+  text-align: center;
+  font-family: serif;
+  font-size: 40px;
+  color: var(--gold);
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+
+.art-caption {
+  position: absolute;
+  bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #d4c39b;
+}
+
+.section {
+  padding: 110px 10%;
+}
+
+.intro {
+  max-width: 950px;
+}
+
+.intro h2,
+.foundations h2,
+.quote-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 5vw, 54px);
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.intro > p:last-child {
+  max-width: 650px;
+  margin-top: 25px;
+  color: var(--muted);
+}
+
+.foundations {
+  background: #eeecdf;
+}
+
+.foundations h2 {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.foundation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.foundation-card {
+  padding: 28px 23px;
+  min-height: 250px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foundation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(24, 60, 50, 0.08);
+}
+
+.card-number {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.foundation-card h3 {
+  margin: 24px 0 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+.foundation-card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.quote-section {
+  padding: 110px 10%;
+  text-align: center;
+  background: var(--deep-green);
+  color: var(--cream);
+}
+
+.quote-section .primary-button {
+  margin-top: 35px;
+}
+
+footer {
+  padding: 40px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+footer .logo {
+  color: var(--green);
+}
+
+/* Learning Lab */
+
+.lab-hero {
+  padding: 75px 10%;
+  background: var(--green);
+  color: var(--cream);
+}
+
+.lab-hero h1 {
+  font: 500 clamp(42px, 6vw, 65px)/1.2 'Playfair Display', serif;
+}
+
+.lab-hero p {
+  max-width: 650px;
+  margin-top: 18px;
+  color: #d4ddd4;
+}
+
+.lab-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 6%;
+}
+
+.lab-card {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.lab-card h2 {
+  font: 500 30px 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.lab-card p {
+  color: var(--muted);
+}
+
+.lab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 22px 0;
+}
+
+.lab-controls label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lab-controls select,
+.lab-controls button,
+.quiz-option {
+  display: block;
+  padding: 11px 15px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.lab-controls button {
+  background: var(--green);
+  color: white;
+}
+
+.lab-controls button:hover {
+  background: var(--deep-green);
+}
+
+.punnett-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(65px, 100px));
+  gap: 5px;
+  margin: 25px auto;
+  justify-content: center;
+}
+
+.punnett-grid div {
+  min-height: 65px;
+  display: grid;
+  place-items: center;
+  background: #eeecdf;
+  border: 1px solid var(--line);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.punnett-grid .header-cell {
+  background: var(--green);
+  color: white;
+}
+
+.result-text {
+  margin-top: 20px;
+  padding: 18px;
+  background: #eeecdf;
+  border-left: 4px solid var(--gold);
+}
+
+.quiz-option {
+  width: 100%;
+  margin: 9px 0;
+  text-align: left;
+}
+
+.quiz-option:hover {
+  border-color: var(--gold);
+}
+
+.lab-footer {
+  padding: 30px;
+  background: var(--deep-green);
+  color: var(--cream);
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 75px 8%;
+  }
+
+  .hero-art {
+    min-height: 330px;
+  }
+
+  .foundation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    padding: 20px 6%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar nav {
+    width: 100%;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+
+  .foundation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 75px 7%;
+  }
+
+  .lab-card {
+    padding: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
