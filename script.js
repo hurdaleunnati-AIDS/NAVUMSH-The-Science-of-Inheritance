@@ -136,6 +136,12 @@ function combineAlleles(a, b) {
 
     return a + b;
 }
+function crossDihybridGametes(g1, g2) {
+    const a = combineAlleles(g1[0], g2[0]);
+    const b = combineAlleles(g1[1], g2[1]);
+
+    return a + b;
+}
 
 const dcalculate = document.getElementById("dcalculate");
 
