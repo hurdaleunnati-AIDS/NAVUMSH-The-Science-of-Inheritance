@@ -126,17 +126,15 @@ function getDihybridGametes(genotype) {
 }
 
 function combineAlleles(a, b) {
-  const first = [a, b].sort((x, y) =>
-    x.toLowerCase().localeCompare(y.toLowerCase()) ||
-    x.localeCompare(y)
-  );
-  return first.join("");
-}
+    if (a.toUpperCase() !== b.toUpperCase()) {
+        if (a === a.toUpperCase()) {
+            return a + b;
+        } else {
+            return b + a;
+        }
+    }
 
-function crossDihybridGametes(g1, g2) {
-  const a = combineAlleles(g1[0], g2[0]);
-  const b = combineAlleles(g1[1], g2[1]);
-  return a + b;
+    return a + b;
 }
 
 const dcalculate = document.getElementById("dcalculate");
