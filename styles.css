@@ -439,3 +439,61 @@ footer .logo {
     align-items: flex-start;
   }
 }
+/* NAVUMSH — Learning Lab Improvements */
+
+.lab-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.lab-controls select,
+.lab-controls button {
+  border-radius: 5px;
+}
+
+.lab-controls select:focus-visible,
+.lab-controls button:focus-visible,
+.quiz-option:focus-visible,
+.navbar a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+#dihybrid-result .punnett-grid {
+  grid-template-columns: repeat(5, minmax(55px, 85px));
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.quiz-option:disabled {
+  opacity: 0.75;
+  cursor: default;
+}
+
+#punnett-result h3,
+#dihybrid-result h3 {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#punnett-result p,
+#dihybrid-result p {
+  margin: 8px 0;
+}
+
+@media (max-width: 520px) {
+  .lab-controls {
+    flex-direction: column;
+  }
+
+  .lab-controls label,
+  .lab-controls select,
+  .lab-controls button {
+    width: 100%;
+  }
+
+  #dihybrid-result .punnett-grid {
+    grid-template-columns: repeat(5, minmax(48px, 1fr));
+  }
+}
